@@ -5,6 +5,8 @@ If a macro parameter has comma, code won't compile.
 How to implement macro RESOLVE_COMMA_IN_TYPE(type), which "returns" type.
 If 'type' has comma, then 'type' should be eclosed in parenthesis, but if 'type' doesn't have comma then parenthesis are not needed.
 
+Macro RESOLVE_COMMA_IN_TYPE can be useful in another macro which parameter is type.
+
 ```C++
 // For instance map<int, int> has comma, and code bellow is the same as: map<int, int> m;
 RESOLVE_COMMA_IN_TYPE((map<int, int>)) m;

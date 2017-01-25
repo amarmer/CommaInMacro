@@ -27,7 +27,7 @@ RESOLVE_COMMA_IN_TYPE((std::map<int, int>)) m;
 ```
 
 
-Macro RESOLVE_COMMA_IN_TYPE can be usefull in real C++ in a macro which parameter is a type, for instance:
+Macro RESOLVE_COMMA_IN_TYPE can be usefull in real C++ in another macro which parameter is a type, for instance:
 ```C++
 #define DECLARE_VAR(type, var) RESOLVE_COMMA_IN_TYPE(type) var
 ```

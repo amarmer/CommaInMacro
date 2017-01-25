@@ -13,7 +13,7 @@ RESOLVE_COMMA_IN_TYPE((map<int, int>), m);
 map<int, int> m;
 ```
 
-For instance for vector<int>:
+For instance vector<int> doesn't have comma, then parenthesis are not needed:
 ```C++
 RESOLVE_COMMA_IN_TYPE(vector<int>, v); 
 

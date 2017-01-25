@@ -1,25 +1,23 @@
 ### Comma in macro puzzle
 
-How to implement macro RESOLVE_COMMA_IN_TYPE, which allow to put backets in type which has comma 
-and allow to not use backet for type which doesn't have comma.
+If a macro parameter has comma, code won't compile.
 
-For Instance:
-RESOLVE_COMMA_IN_TYPE((map<int, int>)) m;
+How to implement macro RESOLVE_COMMA_IN_TYPE(type), which "returns" type.
+If 'type' has comma, then 'type' should be eclosed in parenthesis, but if 'type' doesn't have comma then parenthesis are not needed.
 
-RESOLVE_COMMA_IN_TYPE(vector<int>) v;
-
-Then another macro, for instance DECLARE_VAR, can be implemented like 
+For instance map<int, int> has comma, then:
 ```C++
-#define DECLARE_VAR(t, v) RESOLVE_COMMA_IN_TYPE(t) v;
+RESOLVE_COMMA_IN_TYPE((map<int, int>), m);
+
+// It is the same as:
+map<int, int> m;
 ```
 
-And if type has comma, it can be used like:
-```C++
-DECLARE_VAR((map<int, int>), m);
-```
-
-And if doesn't have comma, it can be used like:
+For instance for vector<int>:
 ```C++
 DECLARE_VAR(vector<int>, v); 
+
+// It is the same as:
+vector<int> v;
 ```
 

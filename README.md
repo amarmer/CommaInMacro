@@ -15,7 +15,7 @@ map<int, int> m;
 
 For instance for vector<int>:
 ```C++
-DECLARE_VAR(vector<int>, v); 
+RESOLVE_COMMA_IN_TYPE(vector<int>, v); 
 
 // It is the same as:
 vector<int> v;

@@ -8,6 +8,18 @@ RESOLVE_COMMA_IN_TYPE((map<int, int>)) m;
 
 RESOLVE_COMMA_IN_TYPE(vector<int>) v;
 
-Then another macro, for instance DECLARE_VAR, can be implemented like #define DECLARE_VAR(t, v) RESOLVE_COMMA_IN_TYPE(t) v;
-And can be used like DECLARE_VAR((map<int, int>), m) if type has comma, and like DECLARE_VAR(vector<int>, v) if type doesn't have comma. 
+Then another macro, for instance DECLARE_VAR, can be implemented like 
+```C++
+#define DECLARE_VAR(t, v) RESOLVE_COMMA_IN_TYPE(t) v;
+```
+
+And if type has comma, it can be used like:
+```C++
+DECLARE_VAR((map<int, int>), m);
+```
+
+And if doesn't have comma, it can be used like:
+```C++
+DECLARE_VAR(vector<int>, v); 
+```
 

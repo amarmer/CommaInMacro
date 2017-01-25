@@ -21,3 +21,12 @@ RESOLVE_COMMA_IN_TYPE(vector<int>, v);
 vector<int> v;
 ```
 
+There is possiable solution at http://stackoverflow.com/questions/13842468/comma-in-c-c-macro
+
+```C++
+template<typename T> struct argument_type;
+template<typename T, typename U> struct argument_type<T(U)> { typedef U type; };
+#define FOO(t,name) argument_type<void(t)>::type name
+FOO((std::map<int, int>), map_var);
+```
+

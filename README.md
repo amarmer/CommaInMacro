@@ -23,7 +23,7 @@ template<typename T, typename U> struct argument_type<T(U)> { typedef U type; };
 #define RESOLVE_COMMA_IN_TYPE(type) argument_type<void(t)>::type
 
 // Won't compile in VS 2015
-RESOLVE_COMMA_IN_TYPE((std::map<int, int>)) m;
+RESOLVE_COMMA_IN_TYPE((map<int, int>)) m;
 ```
 
 

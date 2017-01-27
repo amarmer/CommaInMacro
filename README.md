@@ -1,4 +1,4 @@
-### Resolve comma in type parameter in macro 
+### How to resolve comma in type parameter in macro 
 
 If a macro parameter has comma, code won't compile.
 

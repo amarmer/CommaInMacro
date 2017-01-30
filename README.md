@@ -2,7 +2,7 @@
 
 If a macro parameter has comma, code won't compile.
 
-Bellow is implementation of macro RESOLVE_COMMA_IN_TYPE(type), which "returns" type.
+Macro RESOLVE_COMMA_IN_TYPE(type) "returns" type.
 If 'type' has comma, then 'type' should be eclosed in parenthesis, but if 'type' doesn't have comma then parenthesis are not needed.
 
 ```C++

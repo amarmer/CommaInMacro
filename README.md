@@ -29,6 +29,8 @@ RESOLVE_COMMA_IN_TYPE((map<int, int>)) m;
 
 Macro RESOLVE_COMMA_IN_TYPE can be usefull in another macro which parameter is a type, for instance:
 ```C++
+#define JSON_PROPERTY(type, var, name)  JsonProperty<RESOLVE_COMMA_IN_TYPE(type)> var{key(name)}; 
+
 JSON_PROPERTY((map<string, JsonContries>), contries_, "contries");
 ```
 

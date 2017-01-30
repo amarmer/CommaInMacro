@@ -32,7 +32,7 @@ Macro RESOLVE_COMMA_IN_TYPE can be usefull in real C++ in another macro which pa
 JSON_PROPERTY((map<string, JsonContries>), contries_, "contries");
 ```
 
-Bellow is implementation:
+#### Implementation
 ```C++
 struct ResolveCommaInType
 {

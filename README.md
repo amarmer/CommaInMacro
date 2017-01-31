@@ -15,7 +15,7 @@ RESOLVE_COMMA_IN_TYPE((map<int, int>)) m;
 RESOLVE_COMMA_IN_TYPE(vector<int>) v; 
 ```
 
-One proposed solution bellow from http://stackoverflow.com/questions/13842468/comma-in-c-c-macro won't compile in VS 2015.
+One proposed solution bellow from http://stackoverflow.com/questions/13842468/comma-in-c-c-macro doesn't compile in VS 2015.
 
 ```C++
 template<typename T> struct argument_type;

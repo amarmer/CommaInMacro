@@ -15,18 +15,6 @@ RESOLVE_COMMA_IN_TYPE((map<int, int>)) m;
 RESOLVE_COMMA_IN_TYPE(vector<int>) v; 
 ```
 
-One proposed solution bellow from http://stackoverflow.com/questions/13842468/comma-in-c-c-macro doesn't compile in VS 2015.
-
-```C++
-template<typename T> struct argument_type;
-template<typename T, typename U> struct argument_type<T(U)> { typedef U type; };
-#define RESOLVE_COMMA_IN_TYPE(type) argument_type<void(t)>::type
-
-// Doesn't compile in VS 2015
-RESOLVE_COMMA_IN_TYPE((map<int, int>)) m;
-```
-
-
 Macro RESOLVE_COMMA_IN_TYPE can be usefull in another macro which parameter is a type, for instance:
 ```C++
 #define JSON_PROPERTY(type, var, name)  JsonProperty<RESOLVE_COMMA_IN_TYPE(type)> var{key(name)}; 

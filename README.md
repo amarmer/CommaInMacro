@@ -19,7 +19,7 @@ Macro RESOLVE_COMMA_IN_TYPE can be usefull in another macro which parameter is a
 ```C++
 #define JSON_PROPERTY(type, var, name)  JsonProperty<RESOLVE_COMMA_IN_TYPE(type)> var{key(name)}; 
 
-JSON_PROPERTY((map<string, JsonContries>), contries_, "contries");
+JSON_PROPERTY((map<string, JsonCountries>), countries_, "countries");
 ```
 
 
